@@ -3,75 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio</title>
+  <title>Portafolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>TuNombre</h1>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+
+  <!-- Banner principal (solo nombre) -->
+  <header class="banner">
+    <h1>Maleja</h1>
   </header>
 
-  <section id="inicio">
-    <h2>Diseño + Código</h2>
-    <p>Diseñadora interactiva enfocada en desarrollo frontend. Conecto ideas visuales con lógica funcional.</p>
-    <img src="img/ilustracion-perfil.png" alt="Ilustración tuya o avatar" />
-  </section>
-
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Soy una diseñadora interactiva con experiencia en videojuegos, modelado y animación 3D, ilustración y branding. Actualmente me enfoco en el desarrollo frontend para crear experiencias digitales completas.</p>
-    <h3>Habilidades</h3>
+  <!-- Menú de navegación -->
+  <nav class="nav-menu">
     <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Figma, Adobe Suite</li>
-      <li>Unity, Blender, Maya</li>
-      <li>Git & GitHub</li>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#sketchbook">Sketchbook</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
+  </nav>
+
+  <!-- Banner de ilustración -->
+  <section class="banner-ilustracion">
+    <img src="img/xas2ko-cinamoroll-wallpaper.jpg" alt="Ilustración principal de Carlos" />
   </section>
 
-  <section id="proyectos">
-    <h2>Proyectos</h2>
+  <!-- Sección de inicio -->
+  <section id="inicio" class="seccion pastel-amarillo">
+    <h2>Descubre mi mundo visual</h2>
+    <p>Diseño, código y narrativa digital en armonía.</p>
 
-    <div class="proyecto">
-      <img src="img/proyecto1.png" alt="Miniatura del proyecto" />
-      <h3>Nombre del Proyecto</h3>
-      <p>Breve descripción. ¿Qué hiciste? ¿Qué tecnologías usaste? ¿Qué aprendiste?</p>
-      <a href="https://github.com/tuusuario/proyecto1" target="_blank">Ver en GitHub</a> |
-      <a href="https://demo.com/proyecto1" target="_blank">Ver demo</a>
+    <div class="cuadro-habilidades">
+      <div class="habilidad">
+        <img src="img/cinna1.jpeg" alt="Código">
+        <div class="overlay">Código</div>
+      </div>
+      <div class="habilidad">
+        <img src="img/cinna2.jpeg" alt="Diseño">
+        <div class="overlay">Diseño</div>
+      </div>
+      <div class="habilidad">
+        <img src="img/cinna3.jpeg" alt="3D">
+        <div class="overlay">Modelado 3D</div>
+      </div>
+      <div class="habilidad">
+        <img src="img/cinna4.jpeg" alt="Ilustración">
+        <div class="overlay">Ilustración</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección sobre mí -->
+  <section id="sobre-mi" class="seccion pastel-rosa sobre-mi sobre-mi-con-flores">
+    <div class="contenedor-sobre-mi">
+      <div class="foto-sobre-mi">
+        <img src="img/foto sobre mi.png" alt="Foto de Carlos Rendón">
+      </div>
+      <div class="texto-sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>
+          ¡Hola! Soy Maria, diseñadora interactiva, desarrolladora y creadora de narrativas digitales. Me apasiona combinar arte, código y tecnología para dar vida a experiencias únicas, ya sea en 2D, 3D o web. 
+        </p>
+      </div>
     </div>
 
-    <!-- Repite más bloques como este -->
-
+    <!-- Flores flotantes -->
+    <div class="flores">
+      <span class="flor">🌸</span>
+      <span class="flor">🌼</span>
+      <span class="flor">🌺</span>
+      <span class="flor">🌷</span>
+      <span class="flor">🌻</span>
+      <span class="flor">🌼</span>
+      <span class="flor">🌸</span>
+      <span class="flor">🌷</span>
+      <span class="flor">🌺</span>
+      <span class="flor">🌸</span>
+      <span class="flor">🌼</span>
+      <span class="flor">🌻</span>
+    </div>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Quieres trabajar conmigo o saber más? ¡Hablemos!</p>
-    <form>
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu email" required />
-      <textarea placeholder="Tu mensaje"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <p>O encuéntrame en: 
-      <a href="#">GitHub</a>, 
-      <a href="#">LinkedIn</a>, 
-      <a href="#">Instagram</a>
+  <!-- Sección Sketchbook con carrusel -->
+  <section id="sketchbook" class="seccion pastel-lila carrusel-container">
+    <h2>Mi Sketchbook Digital</h2>
+
+    <div class="carrusel">
+      <button class="boton-carrusel" id="anterior">&#10094;</button>
+
+      <img id="imagen-carrusel" src="img/xas2ko-cinamoroll-wallpaper.jpg" alt="Sketch 1">
+
+      <button class="boton-carrusel" id="siguiente">&#10095;</button>
+    </div>
+
+    <p id="descripcion-carrusel" class="descripcion-sketch">
+      Este es un retrato rápido que explora expresiones faciales en estilo cartoon.
     </p>
   </section>
 
-  <footer>
-    <p>© 2025 TuNombre – Portafolio creado con amor y código.</p>
-  </footer>
+  <!-- Sección de proyectos -->
+  <section id="proyectos" class="seccion pastel-azul">
+  <h2>Proyectos destacados</h2>
 
+  <div class="galeria-proyectos">
+    <div class="tarjeta-proyecto">
+      <img src="img/conejo6.jpeg" alt="Proyecto 1">
+      <div class="overlay-proyecto">
+        <h3>Nombre del Proyecto</h3>
+        <p>Descripción breve del proyecto, tecnologías usadas o el enfoque del trabajo.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-proyecto">
+      <img src="img/conejo5.jpeg" alt="Proyecto 2">
+      <div class="overlay-proyecto">
+        <h3>Diseño interactivo</h3>
+        <p>Explora cómo se integraron animaciones, interacción y usabilidad.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-proyecto">
+      <img src="img/conejo4.jpeg" alt="Proyecto 3">
+      <div class="overlay-proyecto">
+        <h3>Aplicación web</h3>
+        <p>Construida con HTML, CSS y JavaScript, pensada para ayudar a artistas emergentes.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-proyecto">
+      <img src="img/conejo3.jpeg" alt="Proyecto 4">
+      <div class="overlay-proyecto">
+        <h3>Visualización de datos</h3>
+        <p>Uso de gráficos interactivos para representar información compleja de forma accesible.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-proyecto">
+      <img src="img/conejo2.jpg" alt="Proyecto 5">
+      <div class="overlay-proyecto">
+        <h3>Ilustración narrativa</h3>
+        <p>Una serie de ilustraciones conectadas por una narrativa digital experimental.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-proyecto">
+      <img src="img/conejo.jpg" alt="Proyecto 6">
+      <div class="overlay-proyecto">
+        <h3>Modelado 3D</h3>
+        <p>Creación de entornos y personajes para videojuego en Unity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sección de contacto -->
+<section id="contacto" class="seccion pastel-verde">
+  <h2>Contacto</h2>
+  <p>
+    Si te interesa colaborar o conocer más sobre mi trabajo, puedes escribirme directamente a: 
+    <a href="mailto:correo@example.com">correo@example.com</a>
+  </p>
+  <p style="margin-top: 1rem;">
+    O si lo prefieres, puedes dejar tus datos a continuación y yo me pondré en contacto contigo lo antes posible:
+  </p>
+
+  <form class="formulario-contacto" id="form-contacto">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre aquí">
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required placeholder="tunombre@correo.com">
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="mensaje-confirmacion" style="display:none; margin-top: 1rem; font-weight: bold;">
+    ¡Gracias! Pronto me pondré en contacto contigo.
+  </p>
+</section>
+
+  <!-- Enlace al script -->
   <script src="script.js"></script>
 </body>
 </html>
