@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
 
@@ -13,13 +18,26 @@
     <h1>Maleja</h1>
   </header>
 
-  <!-- Menú de navegación -->
+  <!-- Menú de navegación actualizado -->
   <nav class="nav-menu">
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
       <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li class="submenu">
+        <a href="#">Proyectos</a>
+        <ul class="submenu-lista">
+          <li class="submenu-categorias">
+            <a href="#categorias">Categorías</a> <!-- ✅ CAMBIO AQUÍ -->
+            <ul class="submenu-lista-sub">
+              <li><a href="#categoria-codigo">Código</a></li>
+              <li><a href="#categoria-diseno">Diseño</a></li>
+              <li><a href="#categoria-3d">3D</a></li>
+              <li><a href="#categoria-ilustracion">Ilustración</a></li>
+            </ul>
+          </li>
+          <li><a href="#proyectos">Destacados</a></li>
+        </ul>
+      </li>
       <li><a href="#sketchbook">Sketchbook</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
@@ -27,31 +45,6 @@
   <!-- Banner de ilustración -->
   <section class="banner-ilustracion">
     <img src="img/xas2ko-cinamoroll-wallpaper.jpg" alt="Ilustración principal de Carlos" />
-  </section>
-
-  <!-- Sección de inicio -->
-  <section id="inicio" class="seccion pastel-amarillo">
-    <h2>Descubre mi mundo visual</h2>
-    <p>Diseño, código y narrativa digital en armonía.</p>
-
-    <div class="cuadro-habilidades">
-      <div class="habilidad">
-        <img src="img/cinna1.jpeg" alt="Código">
-        <div class="overlay">Código</div>
-      </div>
-      <div class="habilidad">
-        <img src="img/cinna2.jpeg" alt="Diseño">
-        <div class="overlay">Diseño</div>
-      </div>
-      <div class="habilidad">
-        <img src="img/cinna3.jpeg" alt="3D">
-        <div class="overlay">Modelado 3D</div>
-      </div>
-      <div class="habilidad">
-        <img src="img/cinna4.jpeg" alt="Ilustración">
-        <div class="overlay">Ilustración</div>
-      </div>
-    </div>
   </section>
 
   <!-- Sección sobre mí -->
@@ -85,15 +78,93 @@
     </div>
   </section>
 
-  <!-- Sección Sketchbook con carrusel -->
+  <!-- Sección de Categorías -->
+  <section id="categorias" class="seccion pastel-amarillo">
+    <h2>Descubre mi mundo visual</h2>
+    <p>Diseño, código y narrativa digital en armonía.</p>
+
+    <div class="cuadro-habilidades">
+      <div class="habilidad">
+        <img src="img/cinna1.jpeg" alt="Código">
+        <div class="overlay">Código</div>
+      </div>
+      <div class="habilidad">
+        <img src="img/cinna2.jpeg" alt="Diseño">
+        <div class="overlay">Diseño</div>
+      </div>
+      <div class="habilidad">
+        <img src="img/cinna3.jpeg" alt="3D">
+        <div class="overlay">Modelado 3D</div>
+      </div>
+      <div class="habilidad">
+        <img src="img/cinna4.jpeg" alt="Ilustración">
+        <div class="overlay">Ilustración</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Proyectos -->
+  <section id="proyectos" class="seccion pastel-azul">
+    <h2>Proyectos destacados</h2>
+
+    <div class="galeria-proyectos">
+      <div class="tarjeta-proyecto">
+        <img src="img/conejo6.jpeg" alt="Proyecto 1">
+        <div class="overlay-proyecto">
+          <h3>Nombre del Proyecto</h3>
+          <p>Descripción breve del proyecto, tecnologías usadas o el enfoque del trabajo.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <img src="img/conejo5.jpeg" alt="Proyecto 2">
+        <div class="overlay-proyecto">
+          <h3>Diseño interactivo</h3>
+          <p>Explora cómo se integraron animaciones, interacción y usabilidad.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <img src="img/conejo4.jpeg" alt="Proyecto 3">
+        <div class="overlay-proyecto">
+          <h3>Aplicación web</h3>
+          <p>Construida con HTML, CSS y JavaScript, pensada para ayudar a artistas emergentes.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <img src="img/conejo3.jpeg" alt="Proyecto 4">
+        <div class="overlay-proyecto">
+          <h3>Visualización de datos</h3>
+          <p>Uso de gráficos interactivos para representar información compleja de forma accesible.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <img src="img/conejo2.jpg" alt="Proyecto 5">
+        <div class="overlay-proyecto">
+          <h3>Ilustración narrativa</h3>
+          <p>Una serie de ilustraciones conectadas por una narrativa digital experimental.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <img src="img/conejo.jpg" alt="Proyecto 6">
+        <div class="overlay-proyecto">
+          <h3>Modelado 3D</h3>
+          <p>Creación de entornos y personajes para videojuego en Unity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Sketchbook -->
   <section id="sketchbook" class="seccion pastel-lila carrusel-container">
     <h2>Mi Sketchbook Digital</h2>
 
     <div class="carrusel">
       <button class="boton-carrusel" id="anterior">&#10094;</button>
-
       <img id="imagen-carrusel" src="img/xas2ko-cinamoroll-wallpaper.jpg" alt="Sketch 1">
-
       <button class="boton-carrusel" id="siguiente">&#10095;</button>
     </div>
 
@@ -102,89 +173,44 @@
     </p>
   </section>
 
-  <!-- Sección de proyectos -->
-  <section id="proyectos" class="seccion pastel-azul">
-  <h2>Proyectos destacados</h2>
-
-  <div class="galeria-proyectos">
-    <div class="tarjeta-proyecto">
-      <img src="img/conejo6.jpeg" alt="Proyecto 1">
-      <div class="overlay-proyecto">
-        <h3>Nombre del Proyecto</h3>
-        <p>Descripción breve del proyecto, tecnologías usadas o el enfoque del trabajo.</p>
-      </div>
-    </div>
-
-    <div class="tarjeta-proyecto">
-      <img src="img/conejo5.jpeg" alt="Proyecto 2">
-      <div class="overlay-proyecto">
-        <h3>Diseño interactivo</h3>
-        <p>Explora cómo se integraron animaciones, interacción y usabilidad.</p>
-      </div>
-    </div>
-
-    <div class="tarjeta-proyecto">
-      <img src="img/conejo4.jpeg" alt="Proyecto 3">
-      <div class="overlay-proyecto">
-        <h3>Aplicación web</h3>
-        <p>Construida con HTML, CSS y JavaScript, pensada para ayudar a artistas emergentes.</p>
-      </div>
-    </div>
-
-    <div class="tarjeta-proyecto">
-      <img src="img/conejo3.jpeg" alt="Proyecto 4">
-      <div class="overlay-proyecto">
-        <h3>Visualización de datos</h3>
-        <p>Uso de gráficos interactivos para representar información compleja de forma accesible.</p>
-      </div>
-    </div>
-
-    <div class="tarjeta-proyecto">
-      <img src="img/conejo2.jpg" alt="Proyecto 5">
-      <div class="overlay-proyecto">
-        <h3>Ilustración narrativa</h3>
-        <p>Una serie de ilustraciones conectadas por una narrativa digital experimental.</p>
-      </div>
-    </div>
-
-    <div class="tarjeta-proyecto">
-      <img src="img/conejo.jpg" alt="Proyecto 6">
-      <div class="overlay-proyecto">
-        <h3>Modelado 3D</h3>
-        <p>Creación de entornos y personajes para videojuego en Unity.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
   <!-- Sección de contacto -->
-<section id="contacto" class="seccion pastel-verde">
-  <h2>Contacto</h2>
-  <p>
-    Si te interesa colaborar o conocer más sobre mi trabajo, puedes escribirme directamente a: 
-    <a href="mailto:correo@example.com">correo@example.com</a>
-  </p>
-  <p style="margin-top: 1rem;">
-    O si lo prefieres, puedes dejar tus datos a continuación y yo me pondré en contacto contigo lo antes posible:
-  </p>
+  <section id="contacto" class="seccion pastel-verde">
+    <h2 style="text-align: left;">Contacto</h2>
+    <p style="text-align: left;">
+      Si te interesa colaborar o conocer más sobre mi trabajo, puedes escribirme directamente a: 
+      <a href="mailto:correo@example.com">malejagrestrepo@gmail.com</a>
+    </p>
+    <p style="margin-top: 1rem; text-align: left;">
+      O si lo prefieres, puedes dejar tus datos a continuación y yo me pondré en contacto contigo lo antes posible:
+    </p>
 
-  <form class="formulario-contacto" id="form-contacto">
-    <label for="nombre">Nombre completo:</label>
-    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre aquí">
+    <form class="formulario-contacto" id="form-contacto">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre aquí">
 
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" name="correo" required placeholder="tunombre@correo.com">
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required placeholder="tunombre@correo.com">
 
-    <button type="submit">Enviar</button>
-  </form>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
 
-  <p id="mensaje-confirmacion" style="display:none; margin-top: 1rem; font-weight: bold;">
-    ¡Gracias! Pronto me pondré en contacto contigo.
-  </p>
-</section>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensaje-confirmacion" style="display:none; margin-top: 1rem; font-weight: bold; text-align: left;">
+      ¡Gracias! Pronto me pondré en contacto contigo.
+    </p>
+  </section>
 
   <!-- Enlace al script -->
   <script src="script.js"></script>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="cerrar-lightbox">&times;</span>
+    <img class="lightbox-img" src="" alt="Imagen ampliada">
+  </div>
+
 </body>
 </html>
+
