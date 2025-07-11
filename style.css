@@ -52,6 +52,23 @@ nav ul li a {
 nav ul li a:hover {
   color: #d0b4ff;
 }
+.nav-menu.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: slideDown 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
 /* Banner ilustración */
 .banner-ilustracion {
@@ -407,30 +424,50 @@ nav ul li a:hover {
 .tarjeta-proyecto:hover .overlay-proyecto {
   opacity: 1;
 }
+
+/* Sección de contacto */
+#contacto {
+  padding-left: 17rem; /* Ajuste para alinear todo desde el mismo punto */
+}
+
+/* Contenedor del formulario */
 .formulario-contacto {
   max-width: 500px;
-  margin: 2rem auto 0;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* Títulos de los campos (alineados a la izquierda) */
 .formulario-contacto label {
   font-weight: bold;
   color: #333;
+  text-align: left;
 }
 
-.formulario-contacto input {
+/* Inputs y textarea */
+.formulario-contacto input,
+.formulario-contacto textarea {
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
   background-color: #fff;
   font-size: 1rem;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  font-family: inherit;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Textarea con tamaño mínimo */
+.formulario-contacto textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botón alineado a la izquierda */
 .formulario-contacto button {
-  padding: 0.75rem;
+  width: fit-content;
+  padding: 0.75rem 2rem;
   background-color: #4CAF50;
   color: white;
   font-weight: bold;
@@ -442,4 +479,132 @@ nav ul li a:hover {
 
 .formulario-contacto button:hover {
   background-color: #3e9441;
+}
+
+#contacto h2 {
+  margin-bottom: 1rem; /* Separación decente debajo del título */
+}
+
+#contacto p {
+  margin: 0; /* Quita márgenes que meten espacio innecesario */
+  line-height: 1.4; /* Altura normal de línea para buena lectura */
+}
+
+#contacto p + p {
+  margin-top: 0.3rem; /* Solo este espacio entre los 2 párrafos */
+  margin-bottom: 2rem; /* Deja aire antes del formulario */
+}
+
+/* SUBMENÚ para Proyectos */
+nav ul li.submenu {
+  position: relative;
+  z-index: 1; /* menor que el nav para que quede detrás */
+}
+
+.submenu-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0.2rem 0;
+  background-color: #b299ff;
+  display: none;
+  min-width: 160px;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  top: 100%;  /* ✅ Aparece justo debajo del botón */
+  left: 0;
+  z-index: 0;  /* ✅ Debajo del menú principal */
+}
+
+nav ul li.submenu:hover > .submenu-lista {
+  display: block;
+}
+
+.submenu-lista li {
+  margin: 0;
+}
+
+.submenu-lista li a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 16px;
+  display: block;
+  font-weight: normal;
+  line-height: 1.2;
+  transition: background-color 0.2s ease;
+}
+
+.submenu-lista li a:hover {
+  background-color: #d0b4ff;
+}
+
+/* Sub-submenú (Categorías) */
+.submenu-categorias {
+  position: relative;
+}
+
+.submenu-categorias:hover .submenu-lista-sub {
+  display: block;
+}
+
+.submenu-lista-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0.2rem 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  background-color: #b39ddb;
+  display: none;
+  min-width: 160px;
+  z-index: 2;
+  border-radius: 0 8px 8px 8px;
+}
+
+.submenu-lista-sub li a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 16px;
+  display: block;
+  font-weight: normal;
+  line-height: 1.2;
+  transition: background-color 0.2s ease;
+}
+
+.submenu-lista-sub li a:hover {
+  background-color: #d0b4ff;
+}
+
+/* Lightbox general */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Imagen del lightbox */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Botón cerrar */
+.cerrar-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+.overlay-proyecto {
+  pointer-events: none;
 }
